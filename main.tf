@@ -1,5 +1,5 @@
-resource "azurerm_sentinel_data_connector_microsoft_cloud_app_security" "sentinel_data_connector_microsoft_cloud_app_securitys" {
-  for_each = var.sentinel_data_connector_microsoft_cloud_app_securitys
+resource "azurerm_sentinel_data_connector_microsoft_cloud_app_security" "sentinel_data_connector_microsoft_cloud_app_securities" {
+  for_each = var.sentinel_data_connector_microsoft_cloud_app_securities
 
   log_analytics_workspace_id = each.value.log_analytics_workspace_id
   name                       = each.value.name
