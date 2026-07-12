@@ -1,3 +1,7 @@
+output "sentinel_data_connector_microsoft_cloud_app_securities_id" {
+  description = "Map of id values across all sentinel_data_connector_microsoft_cloud_app_securities, keyed the same as var.sentinel_data_connector_microsoft_cloud_app_securities"
+  value       = { for k, v in azurerm_sentinel_data_connector_microsoft_cloud_app_security.sentinel_data_connector_microsoft_cloud_app_securities : k => v.id }
+}
 output "sentinel_data_connector_microsoft_cloud_app_securities_alerts_enabled" {
   description = "Map of alerts_enabled values across all sentinel_data_connector_microsoft_cloud_app_securities, keyed the same as var.sentinel_data_connector_microsoft_cloud_app_securities"
   value       = { for k, v in azurerm_sentinel_data_connector_microsoft_cloud_app_security.sentinel_data_connector_microsoft_cloud_app_securities : k => v.alerts_enabled }
